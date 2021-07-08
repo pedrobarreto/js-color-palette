@@ -1,7 +1,10 @@
 //inicio do script
 
-//função criar box de cores 
-
+//função seleciona primeira box de cor 
+window.onload = function () {
+  let mainColor = document.getElementById('black');
+  mainColor.classList.add('selected');
+}
 
 
 
@@ -15,4 +18,24 @@ for (i=0; i < 5; i += 1) {
   pixelLineItens.appendChild(pixels);
   }
 }
+
+//função de selecionar cores 
+function colorPicker() {
+  let colorPalette = document.getElementById('color-palette');
+  let black = 'black';
+  let colorSelected = document.getElementsByClassName('selected');
+  colorPalette.addEventListener('click', function(event) {
+    for(let i = 0; i < colorSelected.length; i += 1) {
+        colorSelected[i].classList.remove('selected');  
+      }
+      let alvo = event.target
+      alvo.classList.add('selected');
+      black = alvo.style.backgroundColor
+      })
+    };
+  
+colorPicker();
+
+
+
 

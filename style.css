@@ -2,11 +2,7 @@
   display: table;
   padding: 5px;
 }
-.tr {
-  display: table-row;
-  padding: 5px;
- 
-}
+
 .color {
   display: table-cell;
   padding: 5px;
@@ -14,6 +10,7 @@
   height: 50px;
   border: #000000 solid 1px;
   margin: 5px;
+  background-color: blueviolet;
 }
 
 #blue{
