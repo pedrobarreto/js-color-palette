@@ -2,7 +2,6 @@
   display: table;
   padding: 5px;
 }
-
 .color {
   display: table-cell;
   padding: 5px;
@@ -10,34 +9,25 @@
   height: 50px;
   border: #000000 solid 1px;
   margin: 5px;
-  background-color: blueviolet;
 }
-
-#blue{
-
+#blue.color{
   background-color: blue;
 }
 
-#yellow{
+#yellow.color{
   background-color:yellow;
 }
 
-#black{
-
-  background-color:black;
+#black.color{
+background-color:black;
 }
-#red{
 
-  background-color:red;
+#red.color{
+background-color:red;
 }
 
 #pixel-board{ 
   margin-top:50px;
-}
-
-.pixelLine {
-  display: table-row;
-  padding: 5px; 
 }
 
 .pixel {
