@@ -10,20 +10,8 @@
   border: #000000 solid 1px;
   margin: 5px;
 }
-#blue.color{
-  background-color: blue;
-}
-
-#yellow.color{
-  background-color:yellow;
-}
-
-#black.color{
-background-color:black;
-}
-
-#red.color{
-background-color:red;
+#black{
+background-color: #000;
 }
 
 #pixel-board{ 

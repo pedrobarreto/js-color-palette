@@ -6,6 +6,19 @@ window.onload = function () {
   mainColor.classList.add('selected');
 }
 
+//Cor randomica
+let randomColor1 = '#' +  Math.ceil(Math.random() * 6000 );
+let randomColor2 = '#' +  Math.ceil(Math.random() * 6000 );
+let randomColor3 = '#' +  Math.ceil(Math.random() * 6000 );
+let black = document.getElementById('black');
+let color1 = document.getElementById('color1');
+let color2 = document.getElementById('color2');
+let color3 = document.getElementById('color3');
+black.style.backgroundColor = '#000'
+color1.style.backgroundColor = randomColor1;
+color2.style.backgroundColor = randomColor2;
+color3.style.backgroundColor = randomColor3;
+
 //função criar quadrados de pixel inicial
 let pixelBoard = document.querySelector('#pixel-board');
 for (i=0; i < 5; i += 1) {
@@ -46,7 +59,6 @@ for (let index = 0; index < input; index += 1) {
 }
 SquarePixel();
 
-
 //função de selecionar cores 
 function colorPicker() {
   let colorSelected = document.getElementsByClassName('selected');
@@ -57,7 +69,7 @@ function colorPicker() {
       colorSelected[i].classList.remove('selected');
       alvo.classList.add('selected');   
       } else if ( alvo.className === 'pixel') {
-      alvo.style.backgroundColor = colorSelected[0].id;
+      alvo.style.backgroundColor = colorSelected[i].style.backgroundColor
       }}
       })
     };
