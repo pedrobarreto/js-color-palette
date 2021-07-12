@@ -37,3 +37,6 @@ height: 40px;
 display:table-cell;
 border: #000000 solid 1px;
 }
+#color-palette {
+  margin-bottom: 20px;
+}

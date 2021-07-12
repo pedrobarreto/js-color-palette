@@ -6,16 +6,46 @@ window.onload = function () {
   mainColor.classList.add('selected');
 }
 
-//função criar quadrados de pixel
-let pixelRow = document.querySelectorAll('#pixelRow');
+//função criar quadrados de pixel inicial
+let pixelBoard = document.querySelector('#pixel-board');
 for (i=0; i < 5; i += 1) {
-  pixelRowItens = pixelRow[i]
+  let pixelsRow = document.createElement('div') 
+  pixelsRow.id = 'pixelRow'
+  pixelBoard.appendChild(pixelsRow);
   for (let index = 0; index < 5; index += 1) {
     let pixels = document.createElement('div');;
   pixels.className = 'pixel';
-  pixelRowItens.appendChild(pixels);
+  pixelBoard.appendChild(pixels);
   }
 }
+
+//função criar quadrados de pixel dinamicamente
+function SquarePixel() {
+let vqvButton = document.getElementById('generate-board');
+vqvButton.addEventListener('click', function() {
+let pixelBoard = document.querySelector('#pixel-board');  
+let input = document.getElementById('board-size').value;
+pixelBoard.innerHTML = '';
+if ( input <= 0 ) {
+window.alert('Board inválido!') 
+} else {
+for ( iR = 0; iR < input; iR += 1) {
+  if ( input <= 4  ) {
+    input = 5 }
+    else if ( input >= 50 ) {
+      input = 50; }
+   let pixelsRow = document.createElement('div') 
+  pixelsRow.id = 'pixelRow'
+  pixelBoard.appendChild(pixelsRow);
+for (let index = 0; index < input; index += 1) {
+ let pixels = document.createElement('div') 
+ pixels.className = 'pixel';
+ pixelBoard.appendChild(pixels);
+} }
+}});
+}
+SquarePixel();
+
 
 //função de selecionar cores 
 function colorPicker() {
