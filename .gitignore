@@ -3,3 +3,7 @@
 node_modules
 /.github
 /.trybe
+/cypress
+cypress
+/.editorconfig
+*.json
